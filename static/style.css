@@ -1,0 +1,214 @@
+/* GLOBAL */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Montserrat, Calibri, system-ui;
+  font-size: 1.6rem;
+  font-weight: lighter;
+  color: #888;
+}
+
+h1, h2, h3 {
+  font-weight: lighter;
+}
+
+.hidden {
+  display: none;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 88px;
+  padding: 20px 30px;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
+nav ul {
+  position: absolute;
+  top: 88px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+nav button {
+  padding: 20px;
+}
+
+/* MAIN */
+main {
+  line-height: 3.2rem;
+  position: relative;
+  top: 88px;
+}
+
+article:nth-child(2n) {
+  background-color: #fafafa;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85vw;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+h1 {
+  padding: 0 20px;
+  font-size: 3rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.3rem;
+  margin-bottom: 24px;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+.promo {
+  text-align: center;
+}
+
+address {
+  font-style: normal;
+}
+
+.link {
+  color: #e66439;
+  font-weight: normal;
+}
+
+@media (min-width: 768px) {
+/* HEADER */
+  header {
+    height: 104px;
+    padding: 20px 40px;
+  }
+
+  .logo {
+    width: 64px;
+    height: 64px;
+  }
+
+/* MAIN */
+  section {
+    padding: 120px 0;
+  }
+}
+
+@media (min-width: 1024px) {
+/* GLOBAL */
+  body {
+    font-size: 2rem;
+  }
+
+/* HEADER */
+  header {
+    background-color: transparent;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav ul {
+    position: relative;
+    top: 0;
+    width: auto;
+    flex-direction: row;
+    background-color: transparent;
+    animation-name: fade-in;
+    animation-duration: 400ms;
+  }
+
+  nav button {
+    padding: 10px 15px;
+  }
+
+  nav button:hover {
+    border-radius: 4px;
+    box-shadow: 0 0 4px #ccc;
+    cursor: pointer;
+    outline: none;
+    transition: 400ms;
+  }
+
+/* MAIN */
+  main {
+    line-height: 4rem;
+    top: 0;
+  }
+
+  article,
+  section {
+    height: 100vh;
+  }
+
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 3.6rem;
+    margin-bottom: 40px;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  .promo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .poems {
+    display: grid;
+    grid-template-columns: repeat(3, 30vw);
+    text-align: center;
+  }
+
+  .poems h2 {
+    grid-column: 1 / 4;
+  }
+}
+
+/* ANIMATIONS */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
