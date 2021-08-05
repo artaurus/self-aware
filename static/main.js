@@ -1,6 +1,9 @@
-const mobile = window.innerWidth < 1024;
+document.querySelector('nav').classList.remove('hidden');
+document.querySelector('button.logo').addEventListener('click', event => window.scrollTo({top: 0}));
 
+const mobile = window.innerWidth < 1024;
 var flag = false;
+
 function toggleMenu() {
   if (flag) {
     document.querySelector('nav ul').classList.add('hidden');
@@ -24,10 +27,7 @@ if (mobile) {
     sections[i].id = li.innerText.toLowerCase().replace(' ', '-');
     li.addEventListener('click', () => {
       toggleMenu();
-      window.scrollTo({
-        top: sections[i].getBoundingClientRect()['y'] - 88,
-        behavior: 'smooth'
-      })
+      window.scrollTo({top: sections[i].getBoundingClientRect()['y'] - 88});
     });
   });
 } else {
@@ -35,10 +35,7 @@ if (mobile) {
   document.querySelectorAll('nav li').forEach((li, i) => {
     li.addEventListener('click', () => {
       toggleMenu();
-      window.scrollTo({
-        top: i*window.innerHeight,
-        behavior: 'smooth'
-      });
+      window.scrollTo({top: i*window.innerHeight});
     });
   });
 }
