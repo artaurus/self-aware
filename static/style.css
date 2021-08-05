@@ -47,6 +47,8 @@ nav ul {
   justify-content: center;
   align-items: center;
   background-color: #fff;
+  animation-name: fade-in;
+  animation-duration: 400ms;
 }
 
 nav button {
@@ -145,8 +147,6 @@ address {
     width: auto;
     flex-direction: row;
     background-color: transparent;
-    animation-name: fade-in;
-    animation-duration: 400ms;
   }
 
   nav button {
@@ -191,15 +191,15 @@ address {
     align-items: center;
   }
 
-  .poems {
+  /* .poems {
     display: grid;
     grid-template-columns: repeat(3, 30vw);
     text-align: center;
-  }
+  } */
 
-  .poems h2 {
+  /* .poems h2 {
     grid-column: 1 / 4;
-  }
+  } */
 }
 
 /* ANIMATIONS */
