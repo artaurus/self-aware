@@ -190,16 +190,6 @@ address {
     justify-content: space-evenly;
     align-items: center;
   }
-
-  /* .poems {
-    display: grid;
-    grid-template-columns: repeat(3, 30vw);
-    text-align: center;
-  } */
-
-  /* .poems h2 {
-    grid-column: 1 / 4;
-  } */
 }
 
 /* ANIMATIONS */
