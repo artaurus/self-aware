@@ -1,8 +1,4 @@
 /* GLOBAL */
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: Montserrat, Calibri, system-ui;
   font-size: 1.6rem;
@@ -14,162 +10,36 @@ h1, h2, h3 {
   font-weight: lighter;
 }
 
-.hidden {
-  display: none;
-}
-
-/* HEADER */
-header {
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 88px;
-  padding: 20px 30px;
-  background-color: #fff;
-  z-index: 1;
-}
-
-.logo {
-  width: 48px;
-  height: 48px;
-  cursor: pointer;
-}
-
-nav ul {
-  position: absolute;
-  top: 88px;
-  left: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  animation-name: fade-in;
-  animation-duration: 400ms;
-}
-
-nav button {
-  padding: 20px;
-}
-
-/* MAIN */
-main {
-  line-height: 3.2rem;
-  position: relative;
-  top: 88px;
-}
-
-article:nth-child(2n) {
-  background-color: #fafafa;
-}
-
-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 85vw;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 40px 0;
-}
-
 h1 {
-  padding: 0 20px;
   font-size: 3rem;
-  text-align: center;
+  line-height: 4rem;
 }
 
 h2 {
   font-size: 2.3rem;
-  margin-bottom: 24px;
 }
 
 h3 {
   font-size: 1.6rem;
 }
 
-.promo {
-  text-align: center;
-}
-
-address {
-  font-style: normal;
-}
-
-.link {
-  color: #e66439;
-  font-weight: normal;
+.hidden {
+  display: none;
 }
 
 @media (min-width: 768px) {
-/* HEADER */
-  header {
-    height: 104px;
-    padding: 20px 40px;
-  }
-
-  .logo {
-    width: 64px;
-    height: 64px;
-  }
-
-/* MAIN */
-  section {
-    padding: 120px 0;
+  h1 {
+    font-size: 4rem;
   }
 }
 
-@media (min-width: 1024px) {
-/* GLOBAL */
+@media (min-width: 1366px) {
+  html {
+    overflow: hidden;
+  }
+
   body {
-    font-size: 2rem;
-  }
-
-/* HEADER */
-  header {
-    background-color: transparent;
-  }
-
-  nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-
-  nav ul {
-    position: relative;
-    top: 0;
-    width: auto;
-    flex-direction: row;
-    background-color: transparent;
-  }
-
-  nav button {
-    padding: 10px 15px;
-  }
-
-  nav button:hover {
-    border-radius: 4px;
-    box-shadow: 0 0 4px #ccc;
-    cursor: pointer;
-    outline: none;
-    transition: 400ms;
-  }
-
-/* MAIN */
-  main {
-    line-height: 4rem;
-    top: 0;
-  }
-
-  article,
-  section {
-    height: 100vh;
+    font-size: 1.8rem;
   }
 
   h1 {
@@ -178,17 +48,139 @@ address {
 
   h2 {
     font-size: 3.6rem;
-    margin-bottom: 40px;
   }
 
   h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+}
+
+/* HEADER */
+header {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+/* MAIN */
+main {
+  line-height: 3.2rem;
+  animation-name: fade-in;
+  animation-duration: 1000ms;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+figure {
+  width: 64vw;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+article {
+  padding: 20px;
+  text-align: center;
+}
+
+p.description {
+  text-align: justify;
+}
+
+table,
+th {
+  font-weight: lighter;
+  border-bottom: #ccc solid 1px;
+}
+
+tr.completed {
+  color: #ccc;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+td {
+  text-align: left;
+}
+
+td:nth-child(2n) {
+  border-left: #ccc solid 1px;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: #ccc solid 1px;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  box-shadow: 0 0 5px #ccc;
+  transition: 400ms;
+}
+
+address {
+  font-style: normal;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  p.description {
+    max-width: 75vw;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1366px) {
+  main {
+    line-height: 3.6rem;
   }
 
-  .promo {
+  div.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100vw;
+  }
+
+  nav {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 100%;
+  }
+
+  figure {
+    max-width: 48vw;
+  }
+
+  section {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    padding-right: 60px;
+  }
+
+  th,
+  td {
+    padding: 20px;
   }
 }
 
