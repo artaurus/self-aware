@@ -120,10 +120,6 @@ td:nth-child(2n) {
   border-left: #ccc solid 1px;
 }
 
-.upper {
-  text-transform: uppercase;
-}
-
 .btn {
   padding: 10px 20px;
   border: #ccc solid 1px;
@@ -167,7 +163,7 @@ address {
   }
 
   figure {
-    max-width: 48vw;
+    max-width: 45vw;
   }
 
   section {
