@@ -13,6 +13,7 @@ setTimeout(() => {
   }, 10);
 }, 1600);
 
+document.querySelector('button.toggle').classList.remove('hidden');
 const btns = document.querySelectorAll('button.toggle');
 btns.forEach(btn => {
   btn.addEventListener('click', () => {
