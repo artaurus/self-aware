@@ -11,7 +11,7 @@ setTimeout(() => {
         if (!opacity) {
           clearInterval(int);
           header.classList.add('hidden');
-          document.querySelector('main').classList.remove('hidden');
+          setTimeout(() => document.querySelector('main').classList.remove('hidden'), 1000);
         }
       }, 10);
     }, 2000);
