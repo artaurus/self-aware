@@ -127,6 +127,13 @@ p.description {
 table,
 th {
   font-weight: lighter;
+}
+
+tr.b-top {
+  border-top: #ccc solid 1px;
+}
+
+tr.b-bottom {
   border-bottom: #ccc solid 1px;
 }
 
