@@ -11,24 +11,26 @@ setTimeout(() => {
         if (!opacity) {
           clearInterval(int);
           header.classList.add('hidden');
-          setTimeout(() => document.querySelector('main').classList.remove('hidden'), 1000);
+          setTimeout(() => {
+            document.querySelector('main').classList.remove('hidden');
+            document.querySelector('footer').classList.remove('hidden');
+          }, 1000);
         }
       }, 10);
     }, 2000);
   }, 1000);
 }, 1200);
 
-document.querySelector('button.toggle').classList.remove('hidden');
-const btns = document.querySelectorAll('button.toggle');
-btns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const articles = document.querySelectorAll('article');
-    articles.forEach(a => {
-      if (a.classList.contains('hidden')) {
-        a.classList.remove('hidden');
-      } else {
-        a.classList.add('hidden');
-      }
-    });
+const btn = document.querySelector('button');
+btn.addEventListener('click', () => {
+  const articles = document.querySelectorAll('article');
+  articles.forEach(a => {
+    if (a.classList.contains('hidden')) {
+      a.classList.remove('hidden');
+    } else {
+      a.classList.add('hidden');
+    }
   });
+  var text = btn.innerText;
+  btn.innerText = text == 'Events'? 'Back' : 'Events';
 });
