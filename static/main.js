@@ -20,17 +20,3 @@ setTimeout(() => {
     }, 2000);
   }, 1000);
 }, 1200);
-
-const btn = document.querySelector('button');
-btn.addEventListener('click', () => {
-  const articles = document.querySelectorAll('article');
-  articles.forEach(a => {
-    if (a.classList.contains('hidden')) {
-      a.classList.remove('hidden');
-    } else {
-      a.classList.add('hidden');
-    }
-  });
-  var text = btn.innerText;
-  btn.innerText = text == 'Events'? 'Back' : 'Events';
-});
