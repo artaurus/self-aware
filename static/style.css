@@ -1,7 +1,6 @@
 /* GLOBAL */
 body {
   font-family: Montserrat, Calibri, system-ui;
-  font-size: 1.6rem;
   font-weight: lighter;
   color: #888;
 }
@@ -11,50 +10,31 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 3rem;
-  line-height: 4rem;
+  font-size: 2.5rem;
   animation-name: fade-in;
   animation-duration: 1000ms;
   animation-timing-function: ease-in;
 }
 
 h2 {
-  font-size: 2.3rem;
+  font-size: 1.5rem;
 }
 
 h3 {
-  font-size: 1.6rem;
-}
-
-.hidden {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  h1 {
-    font-size: 4rem;
-  }
+  font-size: 0.8rem;
 }
 
 @media (min-width: 1366px) {
-  html {
-    overflow: hidden;
-  }
-
-  body {
-    font-size: 1.8rem;
-  }
-
   h1 {
-    font-size: 6rem;
+    font-size: 4rem;
   }
 
   h2 {
-    font-size: 3.6rem;
+    font-size: 2rem;
   }
 
   h3 {
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -74,7 +54,7 @@ header {
 }
 
 figure.om {
-  width: 100px;
+  width: 120px;
   height: auto;
   position: absolute;
   top: 0;
@@ -92,155 +72,125 @@ figure.om {
 
 /* MAIN */
 main {
-  line-height: 3.2rem;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   animation-name: fade-in;
   animation-duration: 1000ms;
   animation-timing-function: ease-in;
 }
 
-div.grid {
-  padding: 20px 0;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  padding: 0 20px;
-}
-
-figure.anil {
-  width: 64vw;
-  max-width: 300px;
-  height: auto;
-  margin: 0 auto;
+article {
+  padding: 20px;
 }
 
 figure.ganesha {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
+  float: right;
+  margin-bottom: 10px;
 }
 
-article {
-  padding: 20px;
-  text-align: center;
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 130px;
 }
 
-p.description {
-  text-align: justify;
-}
-
-table,
-th {
-  font-weight: lighter;
-  border-bottom: #ccc solid 1px;
-}
-
-tr.completed {
-  color: #ccc;
-}
-
-th,
-td {
-  padding: 10px;
-}
-
-td {
-  text-align: left;
-}
-
-td:nth-child(2n) {
-  border-left: #ccc solid 1px;
+figure.anil {
+  width: 80vw;
+  max-width: 360px;
+  height: auto;
+  margin: 0 auto;
 }
 
 .btn {
   padding: 10px 20px;
   border: #ccc solid 1px;
-  border-radius: 10px;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   box-shadow: 0 0 8px #ccc;
   transition: 400ms;
 }
 
-a.inline {
-  display: inline-block;
-  max-width: 60vw;
-}
-
-address {
-  font-style: normal;
-  padding-top: 40px;
+a.link {
+  border-bottom: #888 solid 1px;
 }
 
 footer {
   padding: 10px 20px;
-  font-size: 1.1rem;
+  font-size: 11px;
+  line-height: 1.5;
   text-align: center;
-  line-height: 1.3rem;
+  animation-name: fade-in;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-in;
 }
 
 footer img {
-  height: 11px;
+  height: 10px;
 }
 
 @media (min-width: 768px) {
-  p.description {
-    max-width: 75vw;
-    margin: 0 auto;
+  article {
+    padding: 3vh 10vw;
+  }
+
+  footer {
+    padding-bottom: 3vh;
   }
 }
 
 @media (min-width: 1366px) {
   main {
-    line-height: 3.6rem;
-  }
-
-  div.grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100vw;
-    height: 100vh;
-  }
-
-  nav {
-    position: absolute;
-    padding: 0 40px;
-    width: 100%;
-  }
-
-  section {
-    display: flex;
+    grid-template-columns: 64vw 36vw;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
+  }
+
+  article {
+    padding: 3vw;
+  }
+
+  figure.ganesha {
+    height: 200px;
+    width: 200px;
+    float: left;
+    margin-right: 20px;
+  }
+
+  .header {
+    height: auto;
   }
 
   figure.anil {
     max-width: 30vw;
   }
 
-  section.text {
-    flex-direction: column;
-  }
-
-  th,
-  td {
-    padding: 20px;
-  }
-
   footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     position: absolute;
-    bottom: 10px;
-    right: 10px;
-    padding: 0;
-    font-size: 1.3rem;
+    bottom: 0;
+    width: 99vw;
+    padding-bottom: 0;
+    font-size: 13px;
   }
 
   footer img {
-    height: 13px;
+    height: 12px;
   }
+}
+
+.hidden {
+  display: none;
 }
 
 /* ANIMATIONS */
