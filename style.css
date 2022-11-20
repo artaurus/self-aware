@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  overflow: hidden scroll;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fff;
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  line-height: 2;
+}
+
+h1, h2, h3 {
+  color: #666;
+}
+
+a {
+  color: inherit;
+}
+
+
+header {
+  width: 100%;
+  height: 16vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  background-color: #fff;
+  z-index: 1;
+}
+
+#om {
+  height: 16vh;
+  width: 16vh;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li a {
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  border-bottom: #ccc solid 1px;
+}
+
+nav ul li a#active {
+  pointer-events: none;
+  cursor: default;
+  border-bottom: #ccc solid 1px;
+}
+
+main {
+  min-height: 84vh;
+  position: relative;
+  top: 16vh;
+}
+
+
+main.home {
+  min-height: 68vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main.home h1 {
+  font-size: 64px;
+  font-weight: 300;
+}
+
+
+main.split {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 80px 0;
+}
+
+main.split article.left {
+  max-width: 50vw;
+}
+
+main.split figure.right {
+  height: 60vh;
+  width: auto;
+  position: sticky;
+  top: 20vh;
+}
+
+
+article.centre {
+  max-width: 50vw;
+  margin: 0 auto;
+  padding: 80px 0;
+}
