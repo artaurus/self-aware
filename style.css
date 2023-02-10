@@ -1,7 +1,3 @@
-:root {
-  --displace: 12vh;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +10,6 @@ html {
 }
 
 body {
-  min-height: 100vh;
   background-color: #fff;
   font-size: 16px;
   font-family: Montserrat, sans-serif;
@@ -24,6 +19,7 @@ body {
 
 h1, h2, h3 {
   color: #666;
+  font-weight: 300;
 }
 
 a {
@@ -32,96 +28,92 @@ a {
 
 header {
   width: 100%;
-  height: var(--displace);
+  height: 24vh;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: start;
   align-items: center;
-  padding: 0 20px;
-  position: fixed;
   background-color: #fff;
-  z-index: 1;
-}
-
-header.home {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
 }
 
 #om,
 #ganesha {
-  height: var(--displace);
-  width: var(--displace);
-}
-
-header.home #om {
-  justify-self: start;
-}
-
-header.home #ganesha {
-  justify-self: center;
-}
-
-header.home nav:last-child {
-  justify-self: end;
+  height: 12vh;
+  width: 12vh;
+  margin: 20px 0;
 }
 
 nav ul {
   list-style-type: none;
-  display: flex;
+  background-color: #fff;
+}
+
+nav > ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+nav ul li {
+  width: 130px;
+  text-align: center;
 }
 
 nav ul li a {
-  padding: 10px 20px;
+  display: block;
+  margin: 0 10px;
+  padding: 5px 0px;
   text-decoration: none;
-}
-
-nav ul li a:hover {
-  border-bottom: #ccc solid 1px;
+  cursor: pointer;
 }
 
 nav ul li a#active {
+  color: #999;
   pointer-events: none;
   cursor: default;
-  border-bottom: #ccc solid 1px;
 }
 
-main {
-  min-height: 84vh;
+.dropdown {
+  border: #ccc solid 1px;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown li a {
+  margin: 0;
+}
+
+.dropdown li a:hover {
+  transition: 400ms;
+  background-color: #f6f6f6;
+}
+
+.home-main {
   position: relative;
-  top: var(--displace);
-}
-
-main.home {
-  min-height: 68vh;
+  top: 20vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
 }
 
-main.home h1 {
-  font-size: 64px;
-  font-weight: 300;
-}
-
-main.split {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 80px 0;
-}
-
-main.split article.left {
-  max-width: 50vw;
-}
-
-main.split figure.right {
-  height: 60vh;
-  width: auto;
-  position: sticky;
-  top: 20vh;
+.home-main h1 {
+  font-size: 48px;
 }
 
 article.centre {
   max-width: 50vw;
   margin: 0 auto;
   padding: 80px 0;
+}
+
+figure.in-text {
+  width: 50%;
+  margin: 20px auto;
+}
+
+article ol {
+  padding-left: 20px;
+}
+
+.hidden {
+  display: none;
 }
