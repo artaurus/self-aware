@@ -10,6 +10,7 @@ html {
 }
 
 body {
+  min-height: 100%;
   background-color: #fff;
   font-size: 16px;
   font-family: Montserrat, sans-serif;
@@ -96,13 +97,14 @@ nav ul li a#active {
 }
 
 .home-main h1 {
-  font-size: 48px;
+  font-size: 36px;
 }
 
 article {
   max-width: 50vw;
   margin: 0 auto;
   padding: 80px 0;
+  text-align: justify;
 }
 
 article figure {
@@ -110,8 +112,76 @@ article figure {
   margin: 20px auto;
 }
 
-article ol {
+article ol,
+article ul {
   padding-left: 20px;
+}
+
+main.split {
+  width: 75vw;
+  margin: 0 auto;
+}
+
+main.split div.row {
+  display: grid;
+  grid-gap: 40px;
+  justify-items: center;
+  align-items: center;
+}
+
+main.split div.row-1 {
+  grid-template-columns: 3fr 2fr;
+}
+
+main.split div.row-2 {
+  grid-template-columns: 2fr 3fr;
+}
+
+figure.anil-2 {
+  width: auto;
+  height: 400px;
+}
+
+figure.anil-1 {
+  width: auto;
+  height: 400px;
+}
+
+article.poems {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+
+article.poems ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+article.poems button {
+  color: inherit;
+  background-color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+article.poems button#poem {
+  color: #999;
+  pointer-events: none;
+  cursor: default;
+}
+
+article.poems aside {
+  align-self: start;
+  border-right: #ccc solid 1px;
+  text-align: right;
+  padding-right: 60px;
+}
+
+article.poems section {
+  padding-left: 60px;
 }
 
 .hidden {
